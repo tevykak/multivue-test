@@ -36,7 +36,7 @@ export const genericRouter = new VueRouter({
 
 export const adminRouter = new VueRouter({
   mode: 'history',
-  base: '/admin',
+  base: process.env.NODE_ENV === 'production' ? process.env.BASE_URL : '/admin',
   routes: routes
 })
 

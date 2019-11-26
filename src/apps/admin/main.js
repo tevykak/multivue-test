@@ -12,4 +12,4 @@ new Vue({
   name: 'Admin',
   router: adminRouter,
   render: h => h(App)
-}).$mount('#admin')
+}).$mount('#app')

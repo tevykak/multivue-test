@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "rimraf vue.config.js && cp vue.configDefault.js vue.config.js && vue-cli-service serve",
+    "build:generic": "rimraf vue.config.js && cp vue.configGeneric.js vue.config.js && vue-cli-service build --dest dist src/apps/main.js && rimraf vue.config.js && cp vue.configDefault.js vue.config.js",
+    "build:admin": "rimraf vue.config.js && cp vue.configAdmin.js vue.config.js && vue-cli-service build --dest dist/admin src/apps/admin/main.js && rimraf vue.config.js && cp vue.configDefault.js vue.config.js",
+    "build": "yarn run build:generic && yarn run build:admin",
     "lint": "vue-cli-service lint",
     "postinstall": "if test \"$NODE_ENV\" = \"production\" ; then yarn run build ; fi ",
     "start": "node server.js"
