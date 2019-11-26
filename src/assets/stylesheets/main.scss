@@ -1,0 +1,59 @@
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+
+  h3 {
+    margin: 40px 0 0;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  &.generic {
+    color: #2c3e50;
+
+    a {
+      color: #42b983;
+    }
+
+    #nav {
+      padding: 30px;
+
+      a {
+        font-weight: bold;
+        color: #2c3e50;
+
+        &.router-link-exact-active {
+          color: #42b983;
+        }
+      }
+    }
+  }
+
+  &.admin {
+    color: #439AB0;
+
+    a {
+      color: #CF3F54;
+    }
+
+    #nav {
+      padding: 30px;
+
+      a {
+        font-weight: bold;
+        color: #439AB0;
+
+        &.router-link-exact-active {
+          color: #CF3F54;
+        }
+      }
+    }
+  }
+}
