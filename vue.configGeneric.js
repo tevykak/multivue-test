@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   pages: {
-    admin: {
+    index: {
       entry: 'src/apps/main.js',
       template: 'public/index.html',
       filename: 'index.html',
