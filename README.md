@@ -1,5 +1,7 @@
 # multivue-test
 
+External reference: https://gist.github.com/educkf/97e76da8d8c2b5dad17846a7d576e205
+
 ## Project setup
 ```
 yarn install
